@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inside Africa Tours</title>
+    <!-- Link to External CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Inside Africa Tours</h1>
+            <nav>
+                <ul class="nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="#" class="book-now">Book Now</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Loader Section -->
+<div id="loader" class="loader">
+    <div class="spinner"></div>
+    <p>Loading, please wait...</p>
+</div>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Explore Africa with Inside Africa Tours</h2>
+            <p>Your ultimate guide for travel, adventure, and events.</p>
+            <a href="#services" class="btn" id="get-started-btn">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <h2>Our Services</h2>
+        <div class="service-container">
+            <div class="service-card">
+                <h3>Hotel Pickup & Drop-off</h3>
+                <p>Reliable and comfortable transport.</p>
+            </div>
+            <div class="service-card">
+                <h3>Hotel Booking</h3>
+                <p>Find the best deals on top hotels.</p>
+            </div>
+            <div class="service-card">
+                <h3>City Tours</h3>
+                <p>Explore Kigali City with expert guides.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-content">
+            <p>© 2025 Inside Africa Tours. All rights reserved.</p>
+            <p>Contact: info@insideafricatours.com | Phone: +250 xxxx xxxx</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript for Smooth Scrolling -->
+    <script>
+        // Add smooth scrolling to the "Get Started" button
+        document.getElementById('get-started-btn').addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetSection = document.querySelector('#services');
+            targetSection.scrollIntoView({ behavior: 'smooth' });
+        });
+
+            // Select all links and buttons on the page
+    const linksAndButtons = document.querySelectorAll("a, button");
+
+// Get the loader element
+const loader = document.getElementById("loader");
+
+// Add click event listeners to links and buttons
+linksAndButtons.forEach((element) => {
+    element.addEventListener("click", function (e) {
+        // Prevent default behavior for demonstration (remove this for actual navigation)
+        if (this.tagName === "A" && this.getAttribute("href") !== "#") {
+            e.preventDefault();
+        }
+
+        // Show the loader
+        loader.style.display = "block";
+
+        // Simulate a delay (e.g., waiting for navigation)
+        setTimeout(() => {
+            loader.style.display = "none";
+
+            // For actual navigation, you can uncomment this
+            // if it's a link, redirect to the href
+            if (this.tagName === "A" && this.getAttribute("href") !== "#") {
+                window.location.href = this.getAttribute("href");
+            }
+        }, 2000); // 2 seconds delay to simulate loading
+    });
+});
+    </script>
+</body>
+</html>
