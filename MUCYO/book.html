@@ -8,9 +8,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    
-    <!-- Header Section -->
-    <header>
+     <!-- Header Section -->
+     <header>
         <div class="container">
             <a href="index.html">
             <img src="timber.jpeg" alt="Logo" class="logo">
@@ -27,26 +26,22 @@
             </nav>
         </div>
     </header>
+    
+     <!-- Loader Section -->
+    <div id="loader" class="loader">
+        <div class="spinner"></div>
+        <p>Loading, just a moment...</p>
+    </div>
+    <div class="hero">
+        <h1>Explore Africa with Inside Africa Tours</h1>
+        <p>Your ultimate guide for travel, adventure, and events.</p>
+        <a href="services.html" class="btn">Get Started</a>
+        <a href="book.html" class="btn">Book Now</a>
+    </div>
 
-    <!-- Loader Section -->
-<div id="loader" class="loader">
-    <div class="spinner"></div>
-    <p>Loading, just a moment...</p>
-</div>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h2>Explore Africa with Inside Africa Tours</h2>
-            <p>Your ultimate guide for travel, adventure, and events.</p>
-            <a href="services.html" class="btn" id="get-started-btn">Get Started</a>
-        </div>
-    </section>
-
-    <!-- Services Section -->
     <section class="services" id="services">
         <h2>Our Services</h2>
-        <div class="service-container">
+        <div class="services-container">
             <div class="service-card">
                 <h3>Hotel Pickup & Drop-off</h3>
                 <p>Reliable and comfortable transport.</p>
@@ -61,7 +56,6 @@
             </div>
         </div>
     </section>
-
     <!-- Footer Section -->
     <footer>
         <div class="footer-content">
@@ -74,44 +68,5 @@
         <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i>Twitter</a>
         <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i>Instagram</a>
     </div>
-    <!-- JavaScript for Smooth Scrolling -->
-    <script>
-        // Add smooth scrolling to the "Get Started" button
-        document.getElementById('get-started-btn').addEventListener('click', function(e) {
-            e.preventDefault();
-            const targetSection = document.querySelector('#services');
-            targetSection.scrollIntoView({ behavior: 'smooth' });
-        });
-
-            // Select all links and buttons on the page
-    const linksAndButtons = document.querySelectorAll("a, button");
-
-// Get the loader element
-const loader = document.getElementById("loader");
-
-// Add click event listeners to links and buttons
-linksAndButtons.forEach((element) => {
-    element.addEventListener("click", function (e) {
-        // Prevent default behavior for demonstration (remove this for actual navigation)
-        if (this.tagName === "A" && this.getAttribute("href") !== "#") {
-            e.preventDefault();
-        }
-
-        // Show the loader
-        loader.style.display = "block";
-
-        // Simulate a delay (e.g., waiting for navigation)
-        setTimeout(() => {
-            loader.style.display = "none";
-
-            // For actual navigation, you can uncomment this
-            // if it's a link, redirect to the href
-            if (this.tagName === "A" && this.getAttribute("href") !== "#") {
-                window.location.href = this.getAttribute("href");
-            }
-        }, 2000); // 2 seconds delay to simulate loading
-    });
-});
-    </script>
 </body>
 </html>
